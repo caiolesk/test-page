@@ -1,21 +1,14 @@
 
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Approach from './components/Approach';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import { WhatsappButton } from './components/WhatsappButton';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import About from './components/About.tsx';
+import Services from './components/Services.tsx';
+import Approach from './components/Approach.tsx';
+import Contact from './components/Contact.tsx';
+import Footer from './components/Footer.tsx';
+import { WhatsappButton } from './components/WhatsappButton.tsx';
 
-/**
- * Main App Component
- * Colors Palette:
- * Primary Background: #F2EBDF
- * Secondary Background: #DECEBB
- * Accent/Details: #D3C5B6
- */
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F2EBDF] text-slate-800 selection:bg-[#D3C5B6] selection:text-white">

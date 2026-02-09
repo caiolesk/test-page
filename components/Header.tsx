@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { APP_INFO, NAV_LINKS } from '../constants';
+import { APP_INFO, NAV_LINKS } from '../constants.tsx';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +40,6 @@ const Header: React.FC = () => {
           </span>
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
           {NAV_LINKS.map((link) => (
             <a
@@ -62,7 +61,6 @@ const Header: React.FC = () => {
           </a>
         </nav>
 
-        {/* Mobile Toggle */}
         <button 
           className="md:hidden text-slate-800 p-2"
           onClick={() => setIsOpen(!isOpen)}
@@ -72,7 +70,6 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Nav Overlay */}
       <div 
         className={`md:hidden fixed inset-0 top-[60px] bg-[#F2EBDF]/98 backdrop-blur-lg z-40 transition-all duration-500 ease-in-out ${
           isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'

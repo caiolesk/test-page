@@ -53,20 +53,23 @@ const Services: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {specialties.map((item, index) => (
-            <div 
-              key={index}
-              className="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
-            >
-              <div className="bg-[#F2EBDF] w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#D3C5B6] transition-colors duration-300">
-                <item.Icon className="w-8 h-8 text-[#D3C5B6] group-hover:text-white transition-colors duration-300" />
+          {specialties.map((item, index) => {
+            const IconComponent = item.Icon;
+            return (
+              <div 
+                key={index}
+                className="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+              >
+                <div className="bg-[#F2EBDF] w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#D3C5B6] transition-colors duration-300">
+                  <IconComponent className="w-8 h-8 text-[#D3C5B6] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-slate-800 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {item.description}
+                </p>
               </div>
-              <h3 className="text-xl font-serif font-semibold text-slate-800 mb-3">{item.title}</h3>
-              <p className="text-slate-600 leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
