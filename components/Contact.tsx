@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Mail, Phone, Instagram, Send } from 'lucide-react';
-import { APP_INFO } from '../constants';
+import { APP_INFO } from '../constants.tsx';
 
 const Contact: React.FC = () => {
   return (

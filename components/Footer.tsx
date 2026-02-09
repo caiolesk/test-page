@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { APP_INFO } from '../constants';
+import { APP_INFO } from '../constants.tsx';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

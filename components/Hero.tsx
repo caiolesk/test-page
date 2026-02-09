@@ -1,11 +1,10 @@
 
 import React from 'react';
-import { APP_INFO } from '../constants';
+import { APP_INFO } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden scroll-mt-0">
-      {/* Background shapes for texture */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-[#DECEBB]/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[#D3C5B6]/20 rounded-full blur-3xl"></div>
 
