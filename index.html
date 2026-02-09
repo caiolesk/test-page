@@ -30,15 +30,29 @@
     <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@19.2.4",
-    "react-dom": "https://esm.sh/react-dom@19.2.4",
-    "react-dom/client": "https://esm.sh/react-dom@19.2.4/client",
-    "lucide-react": "https://esm.sh/lucide-react@0.475.0?external=react",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0?external=react",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
+    <script>
+      // Capturador de erros para ajudar no diagnóstico de problemas no GitHub Pages
+      window.onerror = function(msg, url, lineNo, columnNo, error) {
+        console.error('Erro detectado:', msg, 'em', url, 'linha:', lineNo);
+        const root = document.getElementById('root');
+        if (root && root.innerHTML.includes('Iniciando')) {
+          root.innerHTML = `<div style="padding: 20px; text-align: center; color: #888; font-family: serif;">
+            <p>Ocorreu um erro ao carregar o site.</p>
+            <small style="color: #ccc;">${msg}</small>
+          </div>`;
+        }
+        return false;
+      };
+    </script>
   </head>
   <body class="bg-[#F2EBDF]">
     <div id="root">
@@ -49,6 +63,7 @@
         </div>
       </div>
     </div>
+    <!-- O navegador tentará carregar o index.tsx como um módulo JS -->
     <script type="module" src="index.tsx"></script>
   </body>
 </html>

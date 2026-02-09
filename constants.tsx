@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 export const APP_INFO = {
   name: 'Evelyn Cavallari',
@@ -8,8 +7,8 @@ export const APP_INFO = {
   instagram: 'https://www.instagram.com/psi.evelyncavallari',
   instagramHandle: '@psi.evelyncavallari',
   email: 'psi.evelyncavallari@gmail.com',
-  whatsapp: '5511999999999', // Placeholder - user to provide correct number
-  whatsappMessage: 'Olá Evelyn, gostaria de saber mais sobre as sessões de terapia.',
+  whatsapp: '5511999999999', // Substitua pelo número real com DDD
+  whatsappMessage: 'Olá Evelyn, gostaria de agendar uma consulta.',
   colors: {
     bg: '#F2EBDF',
     secondary: '#DECEBB',
