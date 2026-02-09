@@ -13,6 +13,8 @@
       body {
         font-family: 'Inter', sans-serif;
         background-color: #F2EBDF;
+        margin: 0;
+        padding: 0;
       }
       h1, h2, h3, h4, .font-serif {
         font-family: 'Playfair Display', serif;
@@ -20,6 +22,9 @@
       /* Previne que o conteúdo suba para debaixo do header fixo */
       section {
         scroll-margin-top: 5rem;
+      }
+      #root {
+        min-height: 100vh;
       }
     </style>
   <script type="importmap">
@@ -35,5 +40,7 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- Importante: O script abaixo inicia a aplicação React -->
+    <script type="module" src="index.tsx"></script>
   </body>
 </html>

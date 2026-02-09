@@ -1,35 +1,41 @@
 
 import React from 'react';
-import { Heart, Brain, Users, Zap, ShieldCheck, Sun } from 'lucide-react';
+import { Heart, Brain, Users, Zap, ShieldCheck, Sun, LucideIcon } from 'lucide-react';
 
-const specialties = [
+interface Specialty {
+  Icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+const specialties: Specialty[] = [
   {
-    icon: <Heart className="w-8 h-8 text-[#D3C5B6]" />,
+    Icon: Heart,
     title: 'Ansiedade e Estresse',
     description: 'Aprenda a manejar os sintomas físicos e emocionais da ansiedade, recuperando o controle da sua rotina.'
   },
   {
-    icon: <Sun className="w-8 h-8 text-[#D3C5B6]" />,
+    Icon: Sun,
     title: 'Depressão',
     description: 'Suporte especializado para atravessar momentos de apatia, tristeza profunda e falta de perspectiva.'
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 text-[#D3C5B6]" />,
+    Icon: ShieldCheck,
     title: 'Autoestima',
     description: 'Trabalho focado no fortalecimento do autocuidado e na reconstrução da imagem pessoal.'
   },
   {
-    icon: <Users className="w-8 h-8 text-[#D3C5B6]" />,
+    Icon: Users,
     title: 'Relacionamentos',
     description: 'Aprimore a comunicação interpessoal e compreenda padrões afetivos em seus vínculos.'
   },
   {
-    icon: <Brain className="w-8 h-8 text-[#D3C5B6]" />,
+    Icon: Brain,
     title: 'Autoconhecimento',
     description: 'Uma imersão profunda para entender suas escolhas, traumas e desejos fundamentais.'
   },
   {
-    icon: <Zap className="w-8 h-8 text-[#D3C5B6]" />,
+    Icon: Zap,
     title: 'Burnout',
     description: 'Acolhimento para o esgotamento profissional e reequilíbrio entre vida pessoal e trabalho.'
   }
@@ -53,8 +59,7 @@ const Services: React.FC = () => {
               className="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
             >
               <div className="bg-[#F2EBDF] w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#D3C5B6] transition-colors duration-300">
-                {/* Fix: Added <any> generic to React.ReactElement to resolve TS error with className property */}
-                {React.cloneElement(item.icon as React.ReactElement<any>, { className: 'w-8 h-8 text-[#D3C5B6] group-hover:text-white transition-colors duration-300' })}
+                <item.Icon className="w-8 h-8 text-[#D3C5B6] group-hover:text-white transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-serif font-semibold text-slate-800 mb-3">{item.title}</h3>
               <p className="text-slate-600 leading-relaxed">
